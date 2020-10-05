@@ -6,9 +6,6 @@ const ObjectId = require('mongodb').ObjectId;
 require('dotenv').config()
 const port = 5000
 
-app.get('/',(req,res)=>{
-    res.send('working')
-})
 
 const app = express()
 
@@ -82,5 +79,9 @@ app.get('/registrations',(req, res) => {
 })
 
 });
+
+app.get('/',(req,res)=>{
+    res.send('working')
+})
 
 app.listen(process.env.PORT || port)
